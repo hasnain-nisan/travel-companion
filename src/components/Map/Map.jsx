@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react'
 
 const Map = () => {
 
-  const coordinates = { lat: 0, lng:0 }
+  const coordinates = { lat: 23.811056, lng: 90.407608 };
 
   return (
     <div className="h-full w-full">
