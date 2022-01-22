@@ -5,10 +5,10 @@ import {SiYourtraveldottv} from 'react-icons/si'
 
 const Header = () => {
   return (
-    <div class="fixed flex items-center justify-between w-full h-[10%] p-2 shadow-lg">
+    <div class="fixed flex items-center justify-between w-full h-[10%] py-2 px-4  shadow-lg">
       <div className="flex flex-col sm:flex-row items-center px-3">
-        <SiYourtraveldottv className="text-3xl font-bold text-black mr-1" />
-        <h1 className="tracking-wide text-xl text-black">𝕿𝖗𝖆𝖛𝖊𝖑 𝕮𝖔𝖒𝖕𝖆𝖓𝖎𝖔𝖓</h1>
+        <SiYourtraveldottv className="text-4xl font-bold text-black mr-1" />
+        <h1 className="tracking-wide text-xl text-black hidden sm:block">𝕿𝖗𝖆𝖛𝖊𝖑 𝕮𝖔𝖒𝖕𝖆𝖓𝖎𝖔𝖓</h1>
       </div>
       <div className="">
         <div class="bg-indigo-200 mr-4 w-50 h-10 space-x-4 rounded-lg flex items-center justify-center border border-gray-200 shadow-md">
