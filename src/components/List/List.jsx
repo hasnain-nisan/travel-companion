@@ -1,10 +1,22 @@
 import React, {useState} from 'react';
+import PlaceDetails from '../PlaceDetails/PlaceDetails'
 
 
 const List = () => {
 
   const [type, setType] = useState('restaurants')
   const [rating, setRating] = useState(0);
+
+  const places = [
+    { name: "Awesome" },
+    { name: "Best" },
+    { name: "better" },
+    { name: "Nice" },
+    { name: "Good" },
+    { name: "Feel" },
+    { name: "Nature" },
+    { name: "Art" },
+  ];
 
   return (
     <div className="h-full w-full p-4 bg-red-100 ">
@@ -44,7 +56,13 @@ const List = () => {
           </div>
         </div>
       </div>
-      
+      <div className="mt-10">
+        {places.map((place, i) => (
+          <div key={i}>
+            <PlaceDetails place={place}/>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
