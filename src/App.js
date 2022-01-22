@@ -1,10 +1,23 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './app.css';
 import Header from './components/Header/Header'
 import List from './components/List/List'
 import Map from './components/Map/Map'
 
+import {getPlacesData} from './api/index'
+
 const App = () => {
+
+  const [places, setPlaces] = useState([]);
+
+  useEffect(() => {
+    getPlacesData()
+        .then((data) => {
+            setPlaces(data)
+            console.log(data)
+        })
+  }, [])
+
   return (
       <div className="h-screen w-screen m-0 p-0 ">
           <div className="flex flex-col h-full w-full justify-center">
