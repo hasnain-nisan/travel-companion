@@ -51,7 +51,7 @@ const List = ({places}) => {
       </div>
 
       <div className="mt-10 overflow-auto flex flex-row md:flex-col">
-        {places.map((place, i) => (
+        {places?.map((place, i) => (
           <div key={i}>
             <PlaceDetails place={place}/>
           </div>
