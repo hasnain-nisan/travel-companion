@@ -5,7 +5,7 @@ import {SiYourtraveldottv} from 'react-icons/si'
 
 const Header = () => {
   return (
-    <div class="flex items-center justify-between w-full h-full py-2 px-4  shadow-lg">
+    <div class="flex items-center justify-between w-full h-full py-2 px-4 shadow-lg">
       <div className="flex flex-col sm:flex-row items-center px-3">
         <SiYourtraveldottv className="text-4xl font-bold text-black mr-2" />
         <h1 className="tracking-wide text-xl text-black hidden sm:block">𝕿𝖗𝖆𝖛𝖊𝖑 𝕮𝖔𝖒𝖕𝖆𝖓𝖎𝖔𝖓</h1>

@@ -1,30 +1,19 @@
 import React, {useState} from 'react';
 import PlaceDetails from '../PlaceDetails/PlaceDetails'
+import {BsCaretDownFill} from 'react-icons/bs'
 
-
-const List = () => {
+const List = ({places}) => {
 
   const [type, setType] = useState('restaurants')
   const [rating, setRating] = useState(0);
 
-  const places = [
-    { name: "Awesome" },
-    { name: "Best" },
-    { name: "better" },
-    { name: "Nice" },
-    { name: "Good" },
-    { name: "Feel" },
-    { name: "Nature" },
-    { name: "Art" },
-  ];
-
   return (
-    <div className="h-full w-full p-4 bg-red-100 ">
-      <div className="flex flex-col">
-        <h1 className="text-xl font-medium text-gray-800">
+    <div className="relative h-full w-full px-4">
+      <div className="hidden sticky top-[0px] bg-indigo-400 md:flex flex-col py-5">
+        {/* <h1 className="text-xl font-medium text-gray-800">
           𝙍𝙚𝙨𝙩𝙖𝙪𝙧𝙖𝙣𝙩𝙨, 𝙃𝙤𝙩𝙚𝙡𝙨, 𝘼𝙩𝙩𝙧𝙖𝙘𝙩𝙞𝙤𝙣𝙨 𝙖𝙧𝙤𝙪𝙣𝙙 𝙮𝙤𝙪
-        </h1>
-        <div className="mt-5 flex space-x-5 justify-between w-full">
+        </h1> */}
+        <div className="mt-0 flex space-x-5 justify-between w-full">
           <div className="w-1/2">
             <label htmlFor="type">𝘛𝘺𝘱𝘦</label>
             <select
@@ -56,7 +45,12 @@ const List = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10">
+
+      <div className="block md:hidden sticky top-[0px]">
+        <BsCaretDownFill className="text-3xl"/>
+      </div>
+
+      <div className="mt-10 overflow-auto flex flex-row md:flex-col">
         {places.map((place, i) => (
           <div key={i}>
             <PlaceDetails place={place}/>
