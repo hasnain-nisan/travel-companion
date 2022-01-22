@@ -11,11 +11,11 @@ const App = () => {
             <div className="h-[10%] bg-indigo-300">
                 <Header />
             </div>
-            <div className="h-[90%] flex flex-col md:flex-row divide-x-2 divide-black">
-                <div className="w-full md:w-2/5 h-full bg-red-100">
+            <div className="h-[90%] flex flex-col-reverse md:flex-row">
+                <div className="w-full md:w-2/6 h-2/6 md:h-full bg-red-100">
                     <List/>
                 </div>
-                <div className="w-full md:w-3/5 h-full bg-indigo-100">
+                <div className="w-full md:w-4/6 h-4/6 md:h-full bg-indigo-100">
                     <Map/>
                 </div>
             </div>
